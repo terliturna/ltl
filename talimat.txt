@@ -1,0 +1,140 @@
+DENIZYOLU - KARAYOLU - HAVAYOLU
+
+DENIZYOLU seçilirse :
+
+FCL (Komple) - LCL (Parsiyel)
+
+Fcl seçilirse :
+
+Yükleme limanı
+Boşaltma Limanı
+Konteyner tipi ve adedi . Dropdownmenu gibi olabilir 20DC - 40Dc - 40HC - 40OT - 40FR - Diğer / Adet için input olabilir. +(artı ile yeni tip eklenebilir ve - ile çıkartılabilir)
+Tonaj :
+Mal cinsi ve ağırlığı
+İletişim bilgisi:
+Firma adı, ad soyad, email, telefon (email format kontrolü yapılacak) uyarı gösterildiğinde girilen hiçbir veri kaybolmayacak.
+En sonunda bilgilerinizi kontrol edin ( bu aşamada güncelleme imkanı olsun)
+En sonda ise Talebi Gönder butonu olsun ve başarılı gönderimde talebiniz ulaştı, teşekkürler . En kısa sürede dönüş yapacağız tarzı bir mesaj çıksın. TAlep gönderilemezse gönderilemedi desin.
+
+Lcl seçilirse : 
+
+Yükleme limanı
+Boşaltma Limanı
+Yükün kap adedi, ölçüleri ve ağırlığı nedir? (Örn: 2 Palet, 120x80x150 cm, 450 kg)
+Malın cinsi (Emtia türü) nedir? (Örn: Tekstil, Makine Parçası, Kimyasal vb.)
+Bu yükün üzerine başka yük konulabilir mi? (Üst üste yüklenebilir mi?) Evet - Hayır seçeneği buton gibi.
+Yükünüz ne zaman hazır olacak? Hazır - 2 hafta içinde - 2 haftayı geçer seçenekleri olabilir (buton gibi)
+İletişim bilgisi:
+Firma adı, ad soyad, email, telefon (email format kontrolü yapılacak) uyarı gösterildiğinde girilen hiçbir veri kaybolmayacak.
+En sonunda bilgilerinizi kontrol edin ( bu aşamada güncelleme imkanı olsun)
+En sonda ise Talebi Gönder butonu olsun ve başarılı gönderimde talebiniz ulaştı, teşekkürler . En kısa sürede dönüş yapacağız tarzı bir mesaj çıksın. TAlep gönderilemezse gönderilemedi desin.
+
+
+KARAYOLU seçilirse : 
+
+FTL (koMPLE) - LTL (Parsiyel)
+
+Ftl seçilirse : 
+
+Lojibot:
+
+Yükleme nereden yapılacak?
+
+📍 Ülke / Şehir / Posta Kodu
+
+Sonra:
+
+Peki, yük nereye teslim edilecek?
+
+📍 Ülke / Şehir / Posta Kodu
+
+Sonra:
+
+Yük ne zaman hazır olacak?
+
+📅 Tarih
+
+Sonra:
+
+Yükünüzün toplam ağırlığı nedir?
+
+⚖️ kg / ton
+
+Sonra:
+
+Hangi tip araca ihtiyacınız var?
+
+🚛 Tenteli | Mega | Frigo | Kapalı Kasa | Bilmiyorum
+
+Ve bundan sonra cevaba göre yeni sorular açılır.
+
+Örneğin kullanıcı Frigo seçerse:
+
+Taşıma sıcaklığı kaç °C olmalı?
+
+Ama tenteli standart yük seçerse sıcaklık sorusunu hiç göstermezsin.
+
+Sigorta sorulabilir. Sen başka gerekli görürsen eklersin.
+
+İletişim bilgisi:
+Firma adı, ad soyad, email, telefon (email format kontrolü yapılacak) uyarı gösterildiğinde girilen hiçbir veri kaybolmayacak.
+En sonunda bilgilerinizi kontrol edin ( bu aşamada güncelleme imkanı olsun)
+En sonda ise Talebi Gönder butonu olsun ve başarılı gönderimde talebiniz ulaştı, teşekkürler . En kısa sürede dönüş yapacağız tarzı bir mesaj çıksın. TAlep gönderilemezse gönderilemedi desin.
+
+Lt seçilirse : 
+
+Yükleme nereden yapılacak?
+
+📍 Ülke / Şehir / Posta Kodu
+
+Sonra:
+
+Peki, yük nereye teslim edilecek?
+
+📍 Ülke / Şehir / Posta Kodu
+
+Sonra:
+
+Yük ne zaman hazır olacak?
+
+📅 Tarih
+
+Sonra:
+
+Yükünüzün toplam ağırlığı nedir?
+
+⚖️ kg / ton
+
+Ölçüler ve adet girilsin (yanına + ve - ile ekleme çıkarma seçeneği.) 
+
+Tehlikeli Madde? Sigorta Talebi? İstiflenebilir? soruları
+
+İletişim bilgisi:
+Firma adı, ad soyad, email, telefon (email format kontrolü yapılacak) uyarı gösterildiğinde girilen hiçbir veri kaybolmayacak.
+En sonunda bilgilerinizi kontrol edin ( bu aşamada güncelleme imkanı olsun)
+En sonda ise Talebi Gönder butonu olsun ve başarılı gönderimde talebiniz ulaştı, teşekkürler . En kısa sürede dönüş yapacağız tarzı bir mesaj çıksın. TAlep gönderilemezse gönderilemedi desin.
+
+
+
+HAVAYOLU seçilirse : 
+
+
+Yükleme ülkesi / şehir / havalimanı
+Varış ülkesi / şehir / havalimanı
+Yük ne zaman hazır olacak?
+Tarih
+Ürün / yük cinsi
+Toplam ağırlık nedir?
+kg
+Kap cinsi / Ölçüler ve adet / ağırlık (burada + ile yeni kap cinsi,ölçüler ve ağırlık ekleme ve - ile çıkarma olsun.)
+Üstüne yük alınabilir mi?
+
+İletişim bilgisi:
+Firma adı, ad soyad, email, telefon (email format kontrolü yapılacak) uyarı gösterildiğinde girilen hiçbir veri kaybolmayacak.
+En sonunda bilgilerinizi kontrol edin ( bu aşamada güncelleme imkanı olsun)
+En sonda ise Talebi Gönder butonu olsun ve başarılı gönderimde talebiniz ulaştı, teşekkürler . En kısa sürede dönüş yapacağız tarzı bir mesaj çıksın. TAlep gönderilemezse gönderilemedi desin.
+
+
+
+
+
