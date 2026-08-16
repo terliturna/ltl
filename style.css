@@ -1,0 +1,1244 @@
+/* GENEL TASARIM VE TİPOGRAFİ */
+:root {
+    --primary-bg: #F5B72A;
+    --primary-dark: #121212;
+    --transition-speed: 0.2s;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #121212;
+    background-color: #e9e9e9 !important;
+    overflow-y: auto;
+}
+
+.extra-small {
+    font-size: 0.78rem;
+}
+
+/* TRANSPARENT HEADER */
+.transparent-header {
+    background-color: transparent !important;
+}
+
+.logo-img {
+    max-height: 40px;
+    width: auto;
+}
+
+.nav-link {
+    color: #000 !important;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    transition: opacity var(--transition-speed);
+}
+
+.nav-link:hover {
+    opacity: 0.7;
+}
+
+.phone-link {
+    color: #000;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+/* HERO ALANI & SLOGAN BAŞLIKLARI */
+.hero-subtitle {
+    color: #F5B72A;
+    font-size: 0.82rem;
+    letter-spacing: 1.5px;
+}
+
+.dash {
+    color: #F5B72A;
+    font-weight: bold;
+}
+
+.hero-main-title {
+    line-height: 1.25;
+    color: #121212;
+    text-align: center;
+}
+
+.hero-sub-dynamic {
+    color: #333;
+}
+
+.dynamic-country {
+    display: inline-block;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.dynamic-country.fade-out {
+    opacity: 0;
+}
+
+/* GÖRSEL VE SARI ROZET MİMARİSİ (MASAÜSTÜ HİZALAMA GÜNCELLEMESİ) */
+/* Masaüstünde (992px ve üzeri) her iki sütunu eşit yüksekliğe kilitliyoruz */
+@media (min-width: 992px) {
+    .hero-section .row {
+        align-items: stretch !important;
+    }
+
+    .hero-image-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100% !important;
+        min-height: 100%;
+        display: flex;
+    }
+
+    .hero-main-img {
+        width: 100%;
+        height: 100% !important; /* Yüksekliği sağdaki form alanına eşitler */
+        object-fit: cover !important; /* Farklı görsel boyutlarında oranı bozmadan tam doldurur */
+        object-position: center;
+        border-radius: 0px !important;
+    }
+
+    .right-column-card, 
+    .right-column-border {
+        height: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+/* Genel Görsel ve Rozet Ayarları */
+.hero-image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.hero-main-img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0px !important;
+}
+
+.hero-experience-badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #F5B72A;
+    color: #121212;
+    padding: 20px 25px;
+    min-width: 160px;
+    z-index: 2;
+}
+
+.badge-num {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.badge-txt {
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* FORM WRAPPER & SAĞ KAPSAYICI */
+.right-column-card,
+.right-column-border {
+    background-color: transparent;
+    border: 1px solid #dcdcdc;
+    padding: 24px 28px;
+    border-radius: 0px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+}
+
+.form-wrapper {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    width: 100%;
+    flex-grow: 1;
+}
+
+/* INPUT VE SELECT STİLLERİ */
+.custom-input {
+    border-radius: 0px !important;
+    border: 1px solid #dcdcdc !important;
+    padding: 0.55rem 0.75rem !important;
+    font-size: 0.88rem !important;
+    background-color: #fcfcfc !important;
+    box-shadow: none !important;
+}
+
+.custom-input:focus {
+    border-color: #F5B72A !important;
+    background-color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+/* SARI DİK KENARLI BUTONLAR */
+.btn-warning-custom {
+    background-color: #F5B72A;
+    color: #121212;
+    border: none;
+    border-radius: 0px !important;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition-speed);
+}
+
+.btn-warning-custom:hover {
+    background-color: #e0a31b;
+    color: #000;
+}
+
+.btn-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.custom-sharp-btn {
+    border-radius: 0px !important;
+}
+
+/* STEP GÖSTERGESİ */
+.step-progress {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #666;
+}
+
+.step-dot.active {
+    color: #121212;
+    border-bottom: 2px solid #F5B72A;
+}
+
+.step-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.15);
+    margin: 0 8px;
+}
+
+/* AUTOCOMPLETE SUGGESTIONS */
+.autocomplete-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #ffffff;
+    max-height: 180px;
+    overflow-y: auto;
+    border: 1px solid #ced4da;
+    border-radius: 0px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.suggestion-item {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.suggestion-item:hover {
+    background-color: #f5f5f5;
+}
+
+/* FOOTER */
+.main-footer {
+    background-color: transparent;
+}
+
+.footer-link {
+    color: #000;
+    text-decoration: none;
+    transition: opacity var(--transition-speed);
+}
+
+.footer-link:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+.footer-link-sub {
+    color: #333;
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+.footer-link-sub:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* LTL - KARAYOLU PARSİYEL BÖLÜMÜ */
+.ltl-info-section {
+    width: 100%;
+    padding: 3rem 1rem;
+    margin-top: 2rem;
+    background: #e9e9e9 !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.ltl-container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.ltl-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.ltl-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.ltl-header p {
+    font-size: 0.95rem;
+    color: #2b2b2b;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.ltl-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 1.5rem !important;
+    justify-content: center !important;
+}
+
+.ltl-card {
+    flex: 1 1 300px !important;
+    max-width: 360px;
+    background: #ffffff !important;
+    padding: 1.75rem 1.5rem !important;
+    border-radius: 0px !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed) !important;
+}
+
+.ltl-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+.ltl-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #121212;
+    color: #F5B72A;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.ltl-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.ltl-card p {
+    font-size: 0.88rem;
+    color: #4a4a4a;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* RESPONSIVE & MOBİL GÖRSEL UYARLAMASI */
+@media (max-width: 991px) {
+    .ltl-card {
+        flex: 1 1 45% !important;
+        max-width: 100%;
+    }
+    .hero-main-img {
+        height: 380px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    /* MOBİLDE GÖRSEL KÜÇÜLTME */
+    .hero-main-img {
+        height: 220px !important;
+        object-fit: cover !important;
+    }
+    
+    .hero-experience-badge {
+        padding: 10px 15px;
+        min-width: auto;
+    }
+
+    .badge-num {
+        font-size: 1.5rem;
+    }
+
+    .badge-txt {
+        font-size: 0.7rem;
+    }
+
+    .ltl-info-section {
+        padding: 2rem 1rem;
+    }
+
+    .ltl-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .ltl-grid {
+        flex-direction: column !important;
+    }
+
+    .ltl-card {
+        flex: 1 1 100% !important;
+        max-width: 100%;
+    }
+}
+
+/* ==========================================================================
+   BİLGİ BANKASI / KAYNAKLAR BÖLÜMÜ
+   css/style.css dosyasının SONUNA ekle.
+   Not: --ltl-yellow zaten style.css içinde bir CSS değişkeni olarak
+   tanımlıysa (veya benzer bir marka sarısı varsa) aşağıdaki #F5A623
+   yerine onu kullan ki tüm site tek bir sarı tonunda kalsın.
+   ========================================================================== */
+
+.ltl-resources-section{
+  background-color: #E9E9E9; /* hero/form bölümüyle aynı primary sarı zemin */
+  padding: 80px 20px; /* yanlarda garanti boşluk - .ltl-container'ın mobilde ne yaptığından bağımsız çalışır */
+}
+.ltl-resources-section .ltl-container{
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 1200px; /* diğer section'lardaki .ltl-container ile aynı max-width'i kullanıyorsan bu satırı o değere göre güncelle */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 640px){
+  .ltl-resources-section{
+    padding: 56px 16px;
+  }
+}
+
+.ltl-resources-section .ltl-header p{
+  color: #4a3d0f; /* koyulaştırıldı - sarı zemin üzerinde okunabilirlik için */
+}
+
+.ltl-resource-group{
+  margin-top: 44px;
+}
+.ltl-resource-group:first-of-type{
+  margin-top: 36px;
+}
+
+.ltl-resource-group-title{
+  font-weight: 800;
+  color: #14213D; /* koyu lacivert - artık sarı zemin üstünde, sarı yazı okunmaz olurdu */
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 18px;
+  border-bottom: 2px solid rgba(20, 33, 61, 0.2);
+  padding-bottom: 10px;
+}
+
+.ltl-resource-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.ltl-resource-card{
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e9e7e0;
+  border-radius: 10px;
+  padding: 22px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.ltl-resource-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  border-color: #F5A623;
+}
+.ltl-resource-card h4{
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #1a1a1a;
+}
+.ltl-resource-card p{
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: #6b6b63;
+  margin: 0 0 14px;
+  flex-grow: 1;
+}
+.ltl-resource-link{
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.ltl-resource-link i{
+  margin-left: 4px;
+  font-size: 0.75rem;
+  transition: margin-left .15s ease;
+}
+.ltl-resource-card:hover .ltl-resource-link i{
+  margin-left: 8px;
+}
+
+/* ==========================================================================
+   "HEMEN NAVLUN TALEP ET" CTA BANNER
+   Yeni oluşturulacak her bilgi/rehber sayfasına eklenecek ortak bileşen.
+   ========================================================================== */
+/* ==========================================================================
+   "HEMEN NAVLUN TALEP ET" CTA BANNER — style.css'teki mevcut
+   .ltl-cta-banner ve .ltl-cta-inner bloklarının ÜZERİNE yaz.
+   ========================================================================== */
+.ltl-cta-banner{
+  background: #14213D; /* koyu lacivert */
+  padding: 40px 20px; /* yanlarda garanti boşluk - .ltl-container'ın mobilde ne yaptığından bağımsız çalışır */
+}
+.ltl-cta-banner .ltl-container{
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 1200px; /* diğer section'lardaki .ltl-container ile aynı max-width'i kullanıyorsan bu satırı o değere göre güncelle */
+  margin-left: auto;
+  margin-right: auto;
+}
+.ltl-cta-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.ltl-cta-inner h2{
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin: 0 0 6px;
+}
+.ltl-cta-inner p{
+  color: rgba(255,255,255,0.7);
+  font-size: 0.92rem;
+  margin: 0;
+}
+.ltl-cta-btn{
+  white-space: nowrap;
+}
+
+@media (max-width: 640px){
+  .ltl-cta-banner{
+    padding: 32px 16px;
+  }
+  .ltl-cta-inner{ flex-direction: column; align-items: flex-start; }
+}
+
+/* ==========================================================================
+   FOOTER
+   css/style.css dosyasının sonuna ekle.
+   Renk değiştirmek istersen SADECE --ltl-footer-bg değerini güncelle:
+     - Lacivert (önerilen, CTA banner ile tutarlı):  #14213D
+     - Koyu antrasit gri alternatif:                  #2B2B2B
+   ========================================================================== */
+.ltl-footer{
+  --ltl-footer-bg: #14213D;
+  --ltl-footer-text: rgba(255,255,255,0.72);
+  --ltl-footer-heading: #ffffff;
+  --ltl-footer-accent: #F5B72A;
+
+  background: var(--ltl-footer-bg);
+  padding-top: 64px;
+}
+
+.ltl-footer .ltl-container{
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px; /* diğer section'lardaki .ltl-container ile aynı max-width'i kullanıyorsan bu satırı o değere göre güncelle */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 640px){
+  .ltl-footer .ltl-container{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.ltl-footer-grid{
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 48px;
+}
+
+.ltl-footer-col h4{
+  color: var(--ltl-footer-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 18px;
+}
+
+.ltl-footer-brand .ltl-footer-logo{
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+.ltl-footer-brand .ltl-footer-logo span{
+  color: var(--ltl-footer-accent);
+}
+.ltl-footer-brand p{
+  color: var(--ltl-footer-text);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+.ltl-footer-cta{
+  display: inline-flex;
+  white-space: nowrap;
+}
+
+.ltl-footer-col ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ltl-footer-col ul li{
+  margin-bottom: 11px;
+}
+.ltl-footer-col ul li a{
+  color: var(--ltl-footer-text);
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color .15s ease;
+}
+.ltl-footer-col ul li a:hover{
+  color: var(--ltl-footer-accent);
+}
+
+.ltl-footer-contact li{
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.ltl-footer-contact li i{
+  color: var(--ltl-footer-accent);
+  width: 16px;
+  margin-top: 3px;
+}
+
+.ltl-footer-bottom{
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding: 20px 0;
+}
+.ltl-footer-bottom-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.ltl-footer-bottom-inner p{
+  color: rgba(255,255,255,0.55);
+  font-size: 0.8rem;
+  margin: 0;
+}
+.ltl-footer-legal{
+  display: flex;
+  gap: 20px;
+}
+.ltl-footer-legal a{
+  color: rgba(255,255,255,0.55);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+.ltl-footer-legal a:hover{
+  color: var(--ltl-footer-accent);
+}
+
+@media (max-width: 900px){
+  .ltl-footer-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+  .ltl-footer-brand{
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 560px){
+  .ltl-footer-grid{
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .ltl-footer-bottom-inner{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ==========================================================================
+   HEADER
+   css/style.css dosyasının sonuna ekle (önceki .ltl-header-main /
+   .ltl-mega-menu bloklarının üzerine yaz).
+   ========================================================================== */
+.ltl-header-main{
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: #E9E9E9;
+  border-bottom: 1px solid rgba(20,33,61,0.08);
+  transition: box-shadow .2s ease;
+}
+.ltl-header-main.is-scrolled{
+  box-shadow: 0 6px 20px rgba(20,33,61,0.10);
+}
+
+.ltl-header-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 16px 20px;
+}
+
+.ltl-header-logo{
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  text-decoration: none;
+}
+.ltl-header-logo img{
+  height: 40px; /* logonun oranına göre gerekirse bu değeri ayarla */
+  width: auto;
+  display: block;
+}
+
+/* --- Ana nav (desktop) - sağa yaslanmış --- */
+.ltl-main-nav{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.ltl-main-nav > ul{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ltl-main-nav > ul > li > a,
+.ltl-dropdown-toggle{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #14213D;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 8px 0;
+  cursor: pointer;
+}
+.ltl-main-nav > ul > li > a:hover,
+.ltl-dropdown-toggle:hover{
+  color: #C8901E;
+}
+.ltl-dropdown-toggle i{
+  font-size: 0.7rem;
+  transition: transform .15s ease;
+}
+.ltl-has-dropdown.is-open .ltl-dropdown-toggle i{
+  transform: rotate(180deg);
+}
+
+.ltl-nav-toggle{
+  display: none;
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  color: #14213D;
+  padding: 6px 8px;
+}
+
+/* --- Tekli dropdown menü (her rehber kategorisi kendi listesini açar) --- */
+.ltl-has-dropdown{
+  position: relative;
+}
+.ltl-dropdown-menu{
+  display: none;
+  position: absolute;
+  top: calc(100% + 14px);
+  right: 0;
+  min-width: 240px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(20,33,61,0.16);
+  padding: 10px;
+  z-index: 210;
+}
+.ltl-has-dropdown.is-open .ltl-dropdown-menu{
+  display: block;
+}
+.ltl-dropdown-menu a{
+  display: block;
+  font-size: 0.87rem;
+  color: #14213D;
+  text-decoration: none;
+  padding: 9px 12px;
+  border-radius: 8px;
+}
+.ltl-dropdown-menu a:hover{
+  background: #F3F1EC;
+  color: #C8901E;
+}
+
+/* ==========================================================================
+   Responsive — hamburger + açılır liste, her kategori kendi akordeonu
+   ========================================================================== */
+@media (max-width: 960px){
+  .ltl-nav-toggle{ display: block; }
+
+  .ltl-main-nav{
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    padding: 20px;
+    overflow-y: auto;
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .18s ease, transform .18s ease;
+    justify-content: flex-start;
+  }
+  .ltl-main-nav.is-open{
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+  .ltl-main-nav > ul{
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 4px;
+  }
+  .ltl-main-nav > ul > li{
+    border-bottom: 1px solid rgba(20,33,61,0.08);
+  }
+  .ltl-main-nav > ul > li > a,
+  .ltl-dropdown-toggle{
+    width: 100%;
+    justify-content: space-between;
+    padding: 14px 4px;
+  }
+
+  .ltl-dropdown-menu{
+    display: none;
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 4px 4px 16px;
+  }
+  .ltl-has-dropdown.is-open .ltl-dropdown-menu{
+    display: block;
+  }
+}
+/* ==========================================================================
+   İÇERİK / REHBER SAYFALARI (LDM Hesaplama, Türkiye-Almanya, CMR Nedir? vb.)
+   css/style.css dosyasının sonuna ekle.
+   ========================================================================== */
+.ltl-content-page{
+  background: #E9E9E9;
+  padding: 48px 0 80px;
+}
+.ltl-content-inner{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (max-width: 640px){
+  .ltl-content-inner{ padding: 0 16px; }
+}
+
+.ltl-breadcrumb{
+  font-size: 0.82rem;
+  color: #6b6b63;
+  margin-bottom: 18px;
+}
+.ltl-breadcrumb a{
+  color: #6b6b63;
+  text-decoration: none;
+}
+.ltl-breadcrumb a:hover{
+  color: #14213D;
+  text-decoration: underline;
+}
+.ltl-breadcrumb span{
+  color: #14213D;
+  font-weight: 600;
+}
+
+.ltl-content-page h1{
+  font-size: 2rem;
+  font-weight: 800;
+  color: #14213D;
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+.ltl-content-lead{
+  font-size: 1.05rem;
+  color: #3a3a3a;
+  line-height: 1.65;
+  margin-bottom: 28px;
+}
+
+.ltl-content-body{
+  margin-top: 36px;
+}
+
+/* --- Makale tipografisi --- */
+.ltl-article{
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 36px;
+  margin-top: 28px;
+}
+.ltl-article h2{
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #14213D;
+  margin: 32px 0 14px;
+}
+.ltl-article h2:first-child{
+  margin-top: 0;
+}
+.ltl-article p{
+  font-size: 0.96rem;
+  line-height: 1.75;
+  color: #333333;
+  margin-bottom: 14px;
+}
+.ltl-formula{
+  background: #F3F1EC;
+  border-left: 4px solid #F5B72A;
+  padding: 14px 18px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #14213D;
+  border-radius: 6px;
+  margin: 18px 0;
+}
+
+@media (max-width: 640px){
+  .ltl-article{ padding: 22px 18px; }
+}
+
+/* ==========================================================================
+   LDM / m³ HESAPLAMA ARACI (ortak kalıp - m³ hesaplama sayfasında da
+   aynı class isimleri kullanılabilir)
+   ========================================================================== */
+.ltl-calc-tool{
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  margin-top: 28px;
+  border: 1px solid rgba(20,33,61,0.08);
+}
+.ltl-calc-tool h2{
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #14213D;
+  margin: 0 0 20px;
+}
+
+.ltl-calc-col-labels{
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.7fr 40px;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.ltl-calc-col-labels span{
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #6b6b63;
+}
+
+.ltl-calc-rows{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.ltl-calc-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.7fr 40px;
+  gap: 10px;
+  align-items: center;
+}
+.ltl-calc-row-remove{
+  border: none;
+  background: none;
+  color: #C0392B;
+  font-weight: 700;
+  font-size: 1.05rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+}
+.ltl-calc-row-remove:hover{
+  background: #FBE6E2;
+}
+
+.ltl-calc-result{
+  background: #F3F1EC;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-top: 20px;
+}
+.ltl-calc-result-value{
+  font-size: 1.15rem;
+  color: #14213D;
+}
+.ltl-calc-result-value strong{
+  font-size: 1.5rem;
+  color: #C8901E;
+  margin-left: 6px;
+}
+.ltl-calc-result-note{
+  font-size: 0.85rem;
+  color: #6b6b63;
+  margin: 8px 0 0;
+}
+
+.ltl-calc-disclaimer{
+  font-size: 0.8rem;
+  color: #6b6b63;
+  margin: 16px 0 0;
+  line-height: 1.6;
+}
+.ltl-calc-disclaimer a{
+  color: #14213D;
+  font-weight: 600;
+}
+
+@media (max-width: 640px){
+  .ltl-calc-tool{ padding: 20px; }
+  .ltl-calc-col-labels{ display: none; }
+  .ltl-calc-row{ grid-template-columns: 1fr 1fr 0.6fr 34px; }
+}
+/* ==========================================================================
+   4 GİRİŞLİ HESAP MAKİNESİ SATIRI (m³ Hesaplama sayfası - En/Boy/Yükseklik/Adet)
+   content-page.css dosyasının sonuna ekle.
+   ========================================================================== */
+.ltl-calc-col-labels-4{
+  grid-template-columns: 1fr 1fr 1fr 0.7fr 40px;
+}
+.ltl-calc-row-4{
+  grid-template-columns: 1fr 1fr 1fr 0.7fr 40px;
+}
+
+.ltl-calc-result-secondary{
+  margin-top: 10px;
+  font-size: 1rem;
+}
+.ltl-calc-result-secondary strong{
+  font-size: 1.25rem;
+}
+.ltl-calc-factor-note{
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 400;
+  color: #6b6b63;
+  margin-top: 2px;
+}
+
+@media (max-width: 640px){
+  .ltl-calc-row-4{ grid-template-columns: 1fr 1fr 0.6fr 34px; }
+  .ltl-calc-row-4 [data-field="yukseklik"]{ grid-column: 1 / -1; }
+}
+/* ==========================================================================
+   HESAP MAKİNESİ GRID DÜZELTMESİ
+   style.css'in EN SONUNA ekle (content-page.css ve content-page-m3-addon.css
+   bloklarından SONRA). Bileşik seçiciler (.ltl-calc-row.ltl-calc-row-4)
+   kullanıldığı için, dosyaların hangi sırayla eklendiğinden bağımsız olarak
+   her zaman doğru grid uygulanır - artık sıralama önemli değil.
+   ========================================================================== */
+
+/* 4 girişli satır (m³ sayfası: En/Boy/Yükseklik/Adet) - kesin öncelik */
+.ltl-calc-row.ltl-calc-row-4{
+  grid-template-columns: minmax(70px,1fr) minmax(70px,1fr) minmax(70px,1fr) minmax(56px,0.6fr) 34px;
+  gap: 8px;
+}
+.ltl-calc-col-labels.ltl-calc-col-labels-4{
+  grid-template-columns: minmax(70px,1fr) minmax(70px,1fr) minmax(70px,1fr) minmax(56px,0.6fr) 34px;
+  gap: 8px;
+}
+
+/* 3 girişli satır (LDM sayfası: En/Boy/Adet) - biraz daha güvenli minmax */
+.ltl-calc-row:not(.ltl-calc-row-4){
+  grid-template-columns: minmax(90px,1fr) minmax(90px,1fr) minmax(64px,0.6fr) 34px;
+}
+.ltl-calc-col-labels:not(.ltl-calc-col-labels-4){
+  grid-template-columns: minmax(90px,1fr) minmax(90px,1fr) minmax(64px,0.6fr) 34px;
+}
+
+/* Remove (X) butonu: sadece 1'den fazla satır olduğunda görünür - JS ile toggle ediliyor */
+.ltl-calc-row-remove{
+  display: none;
+}
+.ltl-calc-row-remove.is-visible{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 640px){
+  .ltl-calc-row.ltl-calc-row-4{
+    grid-template-columns: 1fr 1fr 0.6fr 34px;
+  }
+  .ltl-calc-row.ltl-calc-row-4 [data-field="yukseklik"]{
+    grid-column: 1 / -1;
+  }
+  .ltl-calc-row:not(.ltl-calc-row-4){
+    grid-template-columns: 1fr 1fr 0.6fr 34px;
+  }
+}
+/* ==========================================================================
+   VERİ TABLOSU (Euro Palet Ölçüleri ve benzeri referans sayfaları)
+   style.css dosyasının sonuna ekle.
+   ========================================================================== */
+.ltl-table-wrap{
+  overflow-x: auto;
+  margin: 8px 0 4px;
+  border-radius: 10px;
+  border: 1px solid rgba(20,33,61,0.10);
+}
+.ltl-data-table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  min-width: 520px;
+}
+.ltl-data-table thead th{
+  background: #14213D;
+  color: #ffffff;
+  text-align: left;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 12px 16px;
+}
+.ltl-data-table tbody td{
+  padding: 12px 16px;
+  border-top: 1px solid rgba(20,33,61,0.08);
+  color: #333333;
+}
+.ltl-data-table tbody tr:nth-child(even){
+  background: #F8F7F4;
+}
+.ltl-data-table td strong{
+  color: #14213D;
+}
+
+.ltl-table-note{
+  font-size: 0.82rem;
+  color: #6b6b63;
+  margin: 10px 0 0;
+}
+.ltl-table-note a{
+  color: #14213D;
+  font-weight: 600;
+}
+
+@media (max-width: 640px){
+  .ltl-data-table{
+    font-size: 0.84rem;
+  }
+  .ltl-data-table thead th,
+  .ltl-data-table tbody td{
+    padding: 10px 12px;
+  }
+}
+/* ==========================================================================
+   GÜZERGAH REHBERİ SAYFALARI — liste ve SSS blokları
+   style.css dosyasının sonuna ekle.
+   ========================================================================== */
+.ltl-list{
+  margin: 0 0 16px;
+  padding-left: 20px;
+}
+.ltl-list li{
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: #333333;
+  margin-bottom: 10px;
+}
+.ltl-list li strong{
+  color: #14213D;
+}
+.ltl-list a{
+  color: #14213D;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.ltl-faq{
+  margin-top: 8px;
+}
+.ltl-faq-item{
+  border-top: 1px solid rgba(20,33,61,0.10);
+  padding: 18px 0;
+}
+.ltl-faq-item:last-child{
+  border-bottom: 1px solid rgba(20,33,61,0.10);
+}
+.ltl-faq-item h3{
+  font-size: 1rem;
+  font-weight: 700;
+  color: #14213D;
+  margin: 0 0 8px;
+}
+.ltl-faq-item p{
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #333333;
+  margin: 0;
+}
