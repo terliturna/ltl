@@ -465,6 +465,25 @@ body {
   padding-bottom: 10px;
 }
 
+/* ==========================================================================
+   ANA SAYFA "REHBERLER" KART GRID'İ — KALICI DÜZELTME
+   style.css'teki .ltl-resource-grid kuralının ÜZERİNE yaz (mevcut
+   grid-template-columns: repeat(3,1fr) satırını kaldır).
+
+   ÖNEMLİ: style.css içinde ".ltl-resource-grid" veya ".ltl-calc-row"
+   gibi class'ları Ctrl+F ile ara — büyük ihtimalle birden fazla kez
+   tanımlanmış durumda (önceki iterasyonlarda "üzerine yaz" dediğim
+   bloklardan biri silinmemiş, yenisinin yanına eklenmiş olabilir).
+   Varsa ESKİ/DUPLICATE bloğu tamamen sil, sadece bu son sürüm kalsın -
+   yoksa hangi kuralın kazanacağı dosya sırasına göre değişip kararsız
+   davranmaya devam eder.
+   ========================================================================== */
+.ltl-resource-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)) !important;
+  gap: 20px;
+}
+
 .ltl-resource-grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1241,4 +1260,46 @@ body {
   line-height: 1.65;
   color: #333333;
   margin: 0;
+}
+/* ==========================================================================
+   HESAP MAKİNESİ SATIRLARI — MOBİL DÜZELTME
+   style.css'in en sonuna ekle. Bu blok, ldm-hesaplama.php ve
+   m3-hesaplama.php'deki HTML/JS güncellemeleriyle BİRLİKTE çalışır -
+   aşağıdaki PHP dosyalarını da mutlaka güncelle.
+   ========================================================================== */
+
+.ltl-calc-field{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ltl-calc-field-label{
+  display: none; /* masaüstünde gizli - üstteki ortak başlık satırı yeterli */
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #6b6b63;
+}
+
+@media (max-width: 640px){
+  .ltl-calc-col-labels{
+    display: none !important; /* mobilde ortak başlık satırı yerine her input kendi etiketini gösterecek */
+  }
+
+  .ltl-calc-row,
+  .ltl-calc-row.ltl-calc-row-4{
+    grid-template-columns: 1fr !important; /* tek sütun - tamamen alt alta */
+    gap: 12px !important;
+  }
+
+  .ltl-calc-field-label{
+    display: block; /* mobilde etiketler görünür */
+  }
+
+  .ltl-calc-row-remove{
+    justify-self: end;
+    width: auto;
+    padding: 4px 10px;
+  }
 }
